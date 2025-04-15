@@ -10,7 +10,7 @@ A simple calculator that includes basic 4 operations (addition, subtraction, mul
 - **PLACE HOLDER**
 
 ## Upcoming Features
-- **Support Multiple Inputs and Operations**: This calculation is not just limited to x and y, but also supports multiple inputs and operations being used at once.
+- **Support Multiple Inputs and Operations**: This calculation is not just limited to operations between 2 numbers, but also supports multiple inputs and operations being used at once.
 
 ## Language & Third-parties application used
 - **Python**
