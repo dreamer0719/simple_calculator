@@ -53,18 +53,13 @@ def handle_button_click(clicked_button_text):
 
 #GUI         
 root = tk.Tk()
-root.geometry("410x481")
+root.geometry("410x523")
 root.title('Simple Calulcator')
-
-#Ensure full column expansion
-for i in range(5):
-    root.columnconfigure(i, weight=1)
-    root.rowconfigure(i, weight=2)
 
 #Display inputs & output 
 result_var = tk.StringVar()
 result_entry = tk.Entry(root, textvariable=result_var,
-                        font=('Arial', 30), relief='ridge', justify='right') 
+                        font=('Arial', 27), relief='ridge', justify='right') 
                         #relief = to create 3d affect (shadow)
                         ##justify = to align the text to the left/right
 result_entry.grid(row=0, column=0, columnspan=5,sticky='nsew', 
@@ -80,10 +75,10 @@ btn_pad = {'padx: 5', 'pady: 5'}
 ##Button frame 
 buttonframe = tk.Frame(root)#, bg='ghost white')
 buttonframe.grid(row=1, column = 0, sticky ='nsew')
-for i in range(5):
-    buttonframe.columnconfigure(i, weight=1)
-for i in range(5):
-    buttonframe.rowconfigure(i, weight=1)
+#for i in range(5):
+    #buttonframe.columnconfigure(i, weight=1)
+#for i in range(5):
+    #buttonframe.rowconfigure(i, weight=1)
 
 # () Button frame
 paren_frame = tk.Frame(buttonframe)
@@ -146,13 +141,10 @@ btn_plus.grid(row=3, column=4,sticky='nsew')
 btn_equals = tk.Button(buttonframe, text='=', font=num_btn_font, height=2, width=25,bg='#f5a250', command=lambda: handle_button_click('='))
 btn_equals.grid(row=4, column=0, columnspan=5)
 
-for key in "0123456789+-*/.='":
+for key in "0123456789+-*/.=^()":
     root.bind(key, lambda event, key=key: handle_button_click(key))  # Bind number keys to their respective buttons
 
 ## keyboard supports
-root.bind('^', lambda event: handle_button_click('^'))  # Shift+6 for power
-root.bind('(', lambda event: handle_button_click('('))
-root.bind(')', lambda event: handle_button_click(')'))
 root.bind('<Return>', lambda event: handle_button_click('='))  # Enter key for equals
 root.bind('<BackSpace>', lambda event: handle_button_click('DEL'))  # Delete key for clear
 

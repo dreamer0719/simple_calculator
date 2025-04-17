@@ -9,6 +9,7 @@ A simple calculator that includes basic 4 operations (addition, subtraction, mul
 
 ## Notices
 - You can either press **"Shift + 6"** on keybroad or **double-type "*"** on the calculator to perform **exponent** operation. 
+- Please delete the output first before type in the next calculation. 
 
 ## How To Download 
 - **PLACE HOLDER**
